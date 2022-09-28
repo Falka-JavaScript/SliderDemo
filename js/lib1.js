@@ -47,7 +47,7 @@ class Slider {
     activateLeftArrowClick() {
         $('#arrow_left').on('click', () => {
             if (this._id > 0) {
-                $(`#${this._id--}`).fadeOut(1000);
+                $(`#${this._id--}`).slideUp(1000);
                 $('progress').val(this._id);
             }else
                 alert("You are at the first image");
@@ -57,7 +57,7 @@ class Slider {
     activateRightArrowClick() {
         $('#arrow_right').on('click', () => {
             if (this._id < 9) {
-                $(`#${++this._id}`).fadeIn(1000);
+                $(`#${++this._id}`).slideDown(1000);
                 $('progress').val(this._id + 1);
             }else
                 alert("You are at the last image");
